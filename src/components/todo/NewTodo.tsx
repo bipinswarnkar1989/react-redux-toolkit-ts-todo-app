@@ -1,14 +1,14 @@
 import { FC, FormEvent, useCallback, useRef } from 'react';
 
-import { apiUrl } from '../mocks/handlers';
-import { useAppDispatch, useAppSelect } from '../redux/hooks';
-import { createTodo, setLoading, setSuccess } from '../redux/todo/todoSlice';
+import { apiUrl } from '../../mocks/handlers';
+import { useAppDispatch, useAppSelect } from '../../redux/hooks';
+import { createTodo, setLoading, setSuccess } from '../../redux/todo/todoSlice';
 
 export const NewTodo: FC = () => {
   const todoTextInputRef = useRef<HTMLInputElement>(null);
 
   const dispatch = useAppDispatch();
-  const { loading, success } = useAppSelect((state) => state.todoState);
+  const { success } = useAppSelect((state) => state.todoState);
 
   const createService = useCallback((txt: string) => {
     const payload = {

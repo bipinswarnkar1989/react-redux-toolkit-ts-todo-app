@@ -6,15 +6,18 @@ import {
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-import { store } from '../redux/store';
+import { store } from '../../redux/store';
 import { NewTodo } from './NewTodo';
 
 describe('<NewTodo />', () => {
   test('should create todo', async () => {
     render(
       <Provider store={store}>
-        <NewTodo />
+        <BrowserRouter>
+          <NewTodo />
+        </BrowserRouter>
       </Provider>
     );
 

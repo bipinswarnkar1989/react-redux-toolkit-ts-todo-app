@@ -36,10 +36,24 @@ const userSlice = createSlice({
         return u;
       });
     },
+    setLoading(state, action) {
+      state.loading = action.payload;
+      state.error = '';
+    },
+    setError(state, action) {
+      state.error = action.payload;
+      state.loading = false;
+    },
   },
 });
 
-export const { setUsers, createUser, deleteUser, updateUser } =
-  userSlice.actions;
+export const {
+  setUsers,
+  createUser,
+  deleteUser,
+  updateUser,
+  setLoading,
+  setError,
+} = userSlice.actions;
 
 export default userSlice.reducer;
