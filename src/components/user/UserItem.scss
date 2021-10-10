@@ -1,0 +1,46 @@
+.useritem {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d0d7dd;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: #d0d7dd;
+  }
+
+  &__name:link,
+  &__name:active {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__name:hover {
+    text-decoration: underline;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+
+    &--nav-item {
+      background-color: #d0d7dd;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 1s;
+
+      &:hover {
+        background-color: hsl(208, 62%, 50%);
+        color: white;
+      }
+    }
+  }
+}

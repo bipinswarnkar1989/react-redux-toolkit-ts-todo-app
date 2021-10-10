@@ -1,15 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-import { store } from '../redux/store';
+import { store } from '../../redux/store';
 import { Todos } from './Todos';
 
 describe('<Todos />', () => {
   test('should render todos if request succeds', async () => {
     render(
       <Provider store={store}>
-        <Todos />
+        <BrowserRouter>
+          <Todos />
+        </BrowserRouter>
       </Provider>
     );
 
@@ -22,7 +25,9 @@ describe('<Todos />', () => {
   test('should delete on clicking on todo', async () => {
     render(
       <Provider store={store}>
-        <Todos />
+        <BrowserRouter>
+          <Todos />
+        </BrowserRouter>
       </Provider>
     );
 

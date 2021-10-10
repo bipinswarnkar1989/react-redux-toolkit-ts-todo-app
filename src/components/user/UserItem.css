@@ -1,0 +1,46 @@
+.useritem {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #d0d7dd;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+}
+
+.useritem:hover {
+  background-color: #d0d7dd;
+}
+
+.useritem__name:link, .useritem__name:active {
+  text-decoration: none;
+  color: black;
+}
+
+.useritem__name:hover {
+  text-decoration: underline;
+}
+
+.useritem__nav {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.useritem__nav--nav-item {
+  background-color: #d0d7dd;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.useritem__nav--nav-item:hover {
+  background-color: #3085cf;
+  color: white;
+}
+/*# sourceMappingURL=UserItem.css.map */
